@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Food</title>
+</head>
+
+<body>
+  <div id="main">
+    {{#if banner}}
+    <div id="overlay"></div>
+    {{else}}
+    {{/if}}
+
+    <header class="px-5 py-3 nav-header">
+      <a href="/" class="c-text-primary logo">
+        <i class="fa fa-cutlery" aria-hidden="true"></i>
+        foodpanda
+      </a>
+
+      {{#if banner}}
+      {{else}}
+      <ul class="d-flex list-unstyled mb-0">
+        <li class="list-group-item border-0">
+          <a class="" href="#">Search</a>
+        </li>
+        <li class="list-group-item border-0">
+          <a class="" href="myaccount">Gaurav</a>
+        </li>
+        <li class="list-group-item border-0">
+          <a class="" href="#">Cart</a>
+        </li>
+
+      </ul>
+      {{/if}}
+    </header>
+    <section>
+      {{{ body}}}
+    </section>
+    <footer class="c-bg-primary  px-5 py-3">
+      <ul class="list-unstyled d-flex justify-content-between align-items-center m-0">
+        <li>All rights reserved <i class="fa fa-copyright" aria-hidden="true"></i> 2020</li>
+        <li>
+          <a href="" class="text-white mr-2"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+          <a href="" class="text-white mr-2"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
+          <a href="" class="text-white"><i class="fa fa-google-plus-square fa-2x" aria-hidden="true"></i></a>
+        </li>
+      </ul>
+    </footer>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
