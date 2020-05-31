@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css">
   <link rel="stylesheet" href="css/style.css">
   <title>Food</title>
 </head>
@@ -31,12 +32,14 @@
           <a class="" href="#">Search</a>
         </li>
         <li class="list-group-item border-0">
-          <a class="" href="myaccount">Gaurav</a>
+          <a class="" href="myaccount">{{name}}</a>
         </li>
         <li class="list-group-item border-0">
-          <a class="" href="#">Cart</a>
+          <a class="" href="/mycart">Cart</a>
         </li>
-
+        <li class="list-group-item border-0">
+          <a class="" href="/logout">Logout</a>
+        </li>
       </ul>
       {{/if}}
     </header>
@@ -55,6 +58,26 @@
     </footer>
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
+  <script src="/js/index.js"></script>
+  <script>
+    toastr.options = {
+    closeButton: true,
+    preventDuplicates: true,
+    timeOut: 1000,
+    progressBar: true
+    };
+    {{#if e_m}}
+    toastr.error('{{e_m}}')
+    {{/if}}
+    {{#if s_m}}
+    toastr.success('{{s_m}}')
+    {{/if}}
+    {{#if loggedin}}
+    toastr.success('{{loggedin}}')
+    {{/if}}
+    
+  </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
     integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
     crossorigin="anonymous"></script>

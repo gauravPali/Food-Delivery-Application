@@ -1,7 +1,7 @@
 <div class="px-5 py-3">
     <div class="restaurants-header border-bottom">
 
-        <span class="font-weight-bold" style="font-size:1.5rem">12 Restaurants</span>
+        <span class="font-weight-bold" style="font-size:1.5rem">{{count}} Restaurants</span>
         <ul class="list-unstyled restaurants-filters mb-0 d-inline-flex">
             <li class="list-group-item border-0 mb-0">
                 <a href="">Deivery Time</a>
@@ -36,115 +36,27 @@
                 </ul>
             </ul>
         </div>
-
-         <div class="restaurant-card border p-2 ">
+        {{#each data}}
+        <div class="restaurant-card border p-2 ">
             <figure>
                 <img src="/img/domino.jpeg" alt="Image">
             </figure>
             <ul class="about-restaurant list-unstyled  mb-0">
-                <li class="r-name font-weight-bold">Domino</li>
+                <li class="r-name font-weight-bold">{{this.name}}</li>
                 <li class="ratings">
-                    <i class="fa fa-star c-text-primary"></i>
-                    <i class="fa fa-star c-text-primary"></i>
-                    <i class="fa fa-star c-text-primary"></i>
-                    <i class="fa fa-star c-text-primary"></i>
-                    <i class="fa fa-star c-text-primary"></i> &nbsp;
-                    <span class="ratings-count">5.0</span>
+                    {{#renderRating this.rating}}
+                    <i class="fa fa-star {{this.class}}"></i>
+                    {{/renderRating}}
+                    &nbsp;<span class="ratings-count">{{this.rating}}</span>
                 </li>
-                <li class="r-tags mt-1 text-secondary">Pizzas, Burgers</li>
+                <li class="r-tags mt-1 text-secondary">{{this.tags}}</li>
                 <ul class="r-others mt-1 list-unstyled text-secondary">
-                    <li><i class="fa fa-clock-o"></i>&nbsp;32 Mins</li>
-                    <li><i class="fa fa-inr" aria-hidden="true"></i>&nbsp;150 for two</li>
+                    <li><i class="fa fa-clock-o"></i>&nbsp;{{this.arrivalTime}}</li>
+                    <li><i class="fa fa-inr" aria-hidden="true"></i>&nbsp;{{this.minCost}}</li>
                 </ul>
             </ul>
         </div>
+        {{/ each}}
 
-         <div class="restaurant-card border p-2 ">
-            <figure>
-                <img src="/img/domino.jpeg" alt="Image">
-            </figure>
-            <ul class="about-restaurant list-unstyled  mb-0">
-                <li class="r-name font-weight-bold">Domino</li>
-                <li class="ratings">
-                    <i class="fa fa-star c-text-primary"></i>
-                    <i class="fa fa-star c-text-primary"></i>
-                    <i class="fa fa-star c-text-primary"></i>
-                    <i class="fa fa-star c-text-primary"></i>
-                    <i class="fa fa-star c-text-primary"></i> &nbsp;
-                    <span class="ratings-count">5.0</span>
-                </li>
-                <li class="r-tags mt-1 text-secondary">Pizzas, Burgers</li>
-                <ul class="r-others mt-1 list-unstyled text-secondary">
-                    <li><i class="fa fa-clock-o"></i>&nbsp;32 Mins</li>
-                    <li><i class="fa fa-inr" aria-hidden="true"></i>&nbsp;150 for two</li>
-                </ul>
-            </ul>
-        </div>
-
-         <div class="restaurant-card border p-2 ">
-            <figure>
-                <img src="/img/domino.jpeg" alt="Image">
-            </figure>
-            <ul class="about-restaurant list-unstyled  mb-0">
-                <li class="r-name font-weight-bold">Domino</li>
-                <li class="ratings">
-                    <i class="fa fa-star c-text-primary"></i>
-                    <i class="fa fa-star c-text-primary"></i>
-                    <i class="fa fa-star c-text-primary"></i>
-                    <i class="fa fa-star c-text-primary"></i>
-                    <i class="fa fa-star c-text-primary"></i> &nbsp;
-                    <span class="ratings-count">5.0</span>
-                </li>
-                <li class="r-tags mt-1 text-secondary">Pizzas, Burgers</li>
-                <ul class="r-others mt-1 list-unstyled text-secondary">
-                    <li><i class="fa fa-clock-o"></i>&nbsp;32 Mins</li>
-                    <li><i class="fa fa-inr" aria-hidden="true"></i>&nbsp;150 for two</li>
-                </ul>
-            </ul>
-        </div>
-
-         <div class="restaurant-card border p-2 ">
-            <figure>
-                <img src="/img/domino.jpeg" alt="Image">
-            </figure>
-            <ul class="about-restaurant list-unstyled  mb-0">
-                <li class="r-name font-weight-bold">Domino</li>
-                <li class="ratings">
-                    <i class="fa fa-star c-text-primary"></i>
-                    <i class="fa fa-star c-text-primary"></i>
-                    <i class="fa fa-star c-text-primary"></i>
-                    <i class="fa fa-star c-text-primary"></i>
-                    <i class="fa fa-star c-text-primary"></i> &nbsp;
-                    <span class="ratings-count">5.0</span>
-                </li>
-                <li class="r-tags mt-1 text-secondary">Pizzas, Burgers</li>
-                <ul class="r-others mt-1 list-unstyled text-secondary">
-                    <li><i class="fa fa-clock-o"></i>&nbsp;32 Mins</li>
-                    <li><i class="fa fa-inr" aria-hidden="true"></i>&nbsp;150 for two</li>
-                </ul>
-            </ul>
-        </div>
-
-         <div class="restaurant-card border p-2 ">
-            <figure>
-                <img src="/img/domino.jpeg" alt="Image">
-            </figure>
-            <ul class="about-restaurant list-unstyled  mb-0">
-                <li class="r-name font-weight-bold">Domino</li>
-                <li class="ratings">
-                    <i class="fa fa-star c-text-primary"></i>
-                    <i class="fa fa-star c-text-primary"></i>
-                    <i class="fa fa-star c-text-primary"></i>
-                    <i class="fa fa-star c-text-primary"></i>
-                    <i class="fa fa-star c-text-primary"></i> &nbsp;
-                    <span class="ratings-count">5.0</span>
-                </li>
-                <li class="r-tags mt-1 text-secondary">Pizzas, Burgers</li>
-                <ul class="r-others mt-1 list-unstyled text-secondary">
-                    <li><i class="fa fa-clock-o"></i>&nbsp;32 Mins</li>
-                    <li><i class="fa fa-inr" aria-hidden="true"></i>&nbsp;150 for two</li>
-                </ul>
-            </ul>
-        </div>
     </div>
 </div>
